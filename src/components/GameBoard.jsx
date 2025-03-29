@@ -21,7 +21,7 @@ export default function GaemBoard({onSelectSquare, turns}) {
             <ol>
               {row.map((col, colIndex) => (
                 <li key={colIndex}>
-                  <button onClick={() => handleButtonClick(rowIndex,colIndex)}>{col}</button>
+                  <button onClick={() => onSelectSquare(rowIndex,colIndex)} disabled={col !== null}>{col}</button>
                 </li>
               ))}
             </ol>
